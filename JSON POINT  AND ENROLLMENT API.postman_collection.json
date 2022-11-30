@@ -1,0 +1,489 @@
+{
+	"info": {
+		"_postman_id": "1e0a9440-549e-410c-976a-946da1c37942",
+		"name": "JSON POINT  AND ENROLLMENT API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GenerateSecurityToken",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"UserName\": \"IntegrationProd\",\r\n    \"UserPassword\": \"IntegrationProd123\",\r\n    \"DevId\": \"4b474ea9-e4ce-4fce-a7a1-74461dafed26\",\r\n    \"AppId\": \"828236dd-badd-4238-b0e8-a69ac653be1c\",\r\n    \"ProgramCode\": \"IntegrationProd\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://lpaaswebapi.easyrewardz.com/api/GenerateSecurityToken",
+					"protocol": "https",
+					"host": [
+						"lpaaswebapi",
+						"easyrewardz",
+						"com"
+					],
+					"path": [
+						"api",
+						"GenerateSecurityToken"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SearchMember",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"EasyId\": \"9026151156\",\r\n    \"UserName\": \"apiuser@mobile.com\",\r\n    \"SecurityToken\": \"if+sbZM1YA7x5hOP5atGCM7y1lDCQmyoDeW4X4IIaiMOVhMNNm9gjLqQ/a5062715jF6Zr6TuCjdCdGApGQeJb8kQ3J+cbs3hK0G7lNP1zwEQ5qYYxYjE2biRqqXXKvowct04drkFBsEZILxHckyIlVmsCwAj7z3NokTf5o74Wnk1HiBopNtqyzYQ2KeiGOE\",\r\n    \"FirstName\": \"\",\r\n    \"ClientID\" :\"\",\r\n    \"LastName\": \"\",\r\n    \"DateOfBirth\": \"\",\r\n    \"MobileNo\": \"\",\r\n    \"PageSize\": \"10\",\r\n    \"PageNumber\": \"1\",\r\n    \"SortExpression\": \"LastUpdated\",\r\n    \"SortDirection\": \"desc\",\r\n    \"UTCOffset\": \"0\",\r\n    \"CultureName\": \"en-US\",\r\n    \"MemberShipCardNumber\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://LPaaSwebapi.easyrewardz.com/api/SearchMember",
+					"protocol": "https",
+					"host": [
+						"LPaaSwebapi",
+						"easyrewardz",
+						"com"
+					],
+					"path": [
+						"api",
+						"SearchMember"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "IsCustomer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"SecurityToken\": \"B8kIxmVMFPE17FUjfp8w4HOgBjb/aHBUQeUNoSFeUvCn6fOEe1gW4d2GzAY0AL9fn9EzEX02QYK5ZZMw1lcD4mMvnklHyRMfbmDN4JbuITdOdJwG045+9tdoMpO3pfqpaZZm2YZ93G+UVMYYXP4nbPqTYR8IHB9afVwowZTHwmA=\",\r\n    \"EasyId\": \"9634098384\",\r\n    \"UserName\": \"apiuser@shashikant.com\",\r\n    \"CountryCode\": \"91\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://LPaaSwebapi.easyrewardz.com/api/IsCustomer",
+					"protocol": "https",
+					"host": [
+						"LPaaSwebapi",
+						"easyrewardz",
+						"com"
+					],
+					"path": [
+						"api",
+						"IsCustomer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GenerateOTP",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"MemberID\": \"9026151156\",\r\n\"EmailID\": \"\",\r\n\"MobileNumber\": [],\r\n\"StoreCode\": \"MoblieStore\",\r\n\"UserName\": \"apiuser@mobile.com\",\r\n\"SecurityToken\": \"if+sbZM1YA7x5hOP5atGCM7y1lDCQmyoDeW4X4IIaiMOVhMNNm9gjLqQ/a5062715jF6Zr6TuCjdCdGApGQeJb8kQ3J+cbs3hK0G7lNP1zwEQ5qYYxYjE2biRqqXXKvowct04drkFBsEZILxHckyIlVmsCwAj7z3NokTf5o74Wnk1HiBopNtqyzYQ2KeiGOE\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://lpaaswebapi.easyrewardz.com/api/GenerateOTP",
+					"protocol": "http",
+					"host": [
+						"lpaaswebapi",
+						"easyrewardz",
+						"com"
+					],
+					"path": [
+						"api",
+						"GenerateOTP"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ValidateOTP",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"MemberID\": \"9026151156\",\r\n\"RequestID\": \"IntegrationProd6958\",\r\n\"OTP\": \"243331\",\r\n\"UserName\": \"apiuser@mobile.com\",\r\n\"SecurityToken\": \"if+sbZM1YA7x5hOP5atGCM7y1lDCQmyoDeW4X4IIaiMOVhMNNm9gjLqQ/a5062715jF6Zr6TuCjdCdGApGQeJb8kQ3J+cbs3hK0G7lNP1zwEQ5qYYxYjE2biRqqXXKvowct04drkFBsEZILxHckyIlVmsCwAj7z3NokTf5o74Wnk1HiBopNtqyzYQ2KeiGOE\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://lpaaswebapi.easyrewardz.com/api/ValidateOTP",
+					"protocol": "http",
+					"host": [
+						"lpaaswebapi",
+						"easyrewardz",
+						"com"
+					],
+					"path": [
+						"api",
+						"ValidateOTP"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RegisterEasyAccount",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\t\"UserName\": \"apiuser@shawman.com\",\r\n\t\t\"SecurityToken\": \"wwFEGfQXcyULVftPyOsBB+eTapx4GEui/dBsVlpxzztGNDPj6drfMlxoT/nZVdPHajjd3wiVR/CVO/oxGf0YnMTKD5pO50Ix2etB9cfzl70W1iWgvjItssgJOdo+5yu/ol0w4CeIWbBQ6osjdWl6AiAc9D5ISGzNwGaj21rYJTo=\",\r\n\t\t\"FirstName\": \"DemoSecond\",\r\n\t\t\"LastName\": \"TestSecond\",\r\n\t\t\"DateOfBirth\": \"09 Sep 2000\",\r\n\t\t\"PinCode\": \"12345\",\r\n\t\t\"EmailId\": \"testsecond678@gmail.com\",\r\n\t\t\"MobileNo\": \"9980012345\",\r\n\t\t\"EasyPin\": \"\",\r\n\t\t\"Gender\": \"Female\",\r\n\t\t\"MemberShipCardNumber\": \"9845673\",\r\n\t\t\"StoreCode\": \"DemoShawman\",\r\n\t\t\"AnniversaryDate\": \"\",\r\n\t\t\"AssignMembershipCard\": \"0\",\r\n\t\t\"CCIPolicyNo\": \"\",\r\n\t\t\"Address1\": \"street 3\",\r\n\t\t\"Address2\": \"street 4\",\r\n\t\t\"EmailSubscribe\": [\r\n\t\t\t\"\",\r\n\t\t\t\"\"\r\n\t\t],\r\n\t\t\"SMSSubscribe\": \"\",\r\n\t\t\"EasyPinTypeId\": \"\",\r\n\t\t\"ReferralCode\": \"\",\r\n\t\t\"InvitedBy\": \"\",\r\n\t\t\"ProfileThumbnailImagepath\": \"\",\r\n\t\t\"EnrollDate\": \"\",\r\n\t\t\"CompanyName\": \"\",\r\n\t\t\"ClientCustomerID\": \"\",\r\n\t\t\"LoyaltyID\": \"\",\r\n\t\t\"PANNo\": \"\",\r\n\t\t\"DeviceID\": \"\",\r\n\t\t\"ChildGender\": \"\",\r\n\t\t\"ChildName\": \"\",\r\n\t\t\"ChildDOB\": \"\",\r\n\t\t\"ExpectedDateDelivery\": \"\",\r\n\t\t\"Twin\": \"\",\r\n\t\t\"Remarks\": \"\",\r\n\t\t\"ChannelCode\": \"Offline\", \r\n\t\t\"CustomerTypeCode\": \"Loyalty\", \r\n\t\t\"TierName\": \"\",\r\n        \"CountryCode\": \"91\",\r\n\t\t\"TierExpiryDate\": \"\"\r\n\t}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://LpaasWebAPI.easyrewardz.com/api/RegisterEasyAccount",
+					"protocol": "http",
+					"host": [
+						"LpaasWebAPI",
+						"easyrewardz",
+						"com"
+					],
+					"path": [
+						"api",
+						"RegisterEasyAccount"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateMemberProfile",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"SecurityToken\": \"wwFEGfQXcyULVftPyOsBB+eTapx4GEui/dBsVlpxzztGNDPj6drfMlxoT/nZVdPHajjd3wiVR/CVO/oxGf0YnMTKD5pO50Ix2etB9cfzl70W1iWgvjItssgJOdo+5yu/ol0w4CeIWbBQ6osjdWl6AiAc9D5ISGzNwGaj21rYJTo=\",\r\n   \"FirstName\": \"Ramesh\",\r\n   \"LastName\": \"TestLName\",\r\n   \"DateOfBirth\": \"09 Sep 2000\",\r\n   \"MobileNo\": \"9480381525\",\r\n   \"Address1\": \"street 3\",\r\n   \"Address2\": \"street 4\",\r\n   \"PinCode\": \"345677\",\r\n   \"EmailId\": \"ramesh.meda@idsnext.com\",\r\n   \"Gender\": \"M\",\r\n   \"StoreCode\": \"DemoShawman\",\r\n   \"AnniversaryDate\": \"\",\r\n   \"UserName\": \"apiuser@shawman.com\",\r\n   \"ChannelCode\": \"Offline\",\r\n   \"CustomerTypeCode\": \"Loyalty\",\r\n   \"ReferralCode\": \"\",\r\n   \"NumberofChildren\": \"\",\r\n   \"CountryCode\": \"91\",\r\n   \"MemberShipCardNumber\": \"536457\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://LPaaSwebapi.easyrewardz.com/api/UpdateMemberProfile",
+					"protocol": "https",
+					"host": [
+						"LPaaSwebapi",
+						"easyrewardz",
+						"com"
+					],
+					"path": [
+						"api",
+						"UpdateMemberProfile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CustomerAvailablePoint",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"EasyId\": \"9901080090\",\r\n    \"SecurityToken\": \"b1Y89vzcrfI0zmk3d6UGGx7KpoGpTOqfF9SNKbNDbJ4qBtM1ot1aAfCvhMlR1OnxEwtGIxP09JlzAv8vSkf67XxTYkHYWJgPwb1gUJuEh+NctoaXNFYsb9tXPBomdl35QoWcBS17R2XLjPQA5MVn9Rx1m4dECb4y9tEMYH2pZCCMR9NCNOi2Tf5ytgdOwLJU\",\r\n    \"ActivityCode\": \"\",\r\n    \"StoreCode\": \"Motherhood Hospital - Indiranagar\",\r\n    \"CountryCode\": \"91\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://LPaaSwebapi.easyrewardz.com/api/CustomerAvailablePoints",
+					"protocol": "https",
+					"host": [
+						"LPaaSwebapi",
+						"easyrewardz",
+						"com"
+					],
+					"path": [
+						"api",
+						"CustomerAvailablePoints"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CheckForEasypointRedemption",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\t\"EasyId\": \"8168126161\",\r\n\t\t\"SecurityToken\": \"B8kIxmVMFPE17FUjfp8w4HOgBjb/aHBUQeUNoSFeUvCn6fOEe1gW4d2GzAY0AL9fn9EzEX02QYK5ZZMw1lcD4mMvnklHyRMfbmDN4JbuITdOdJwG045+9tdoMpO3pfqpaZZm2YZ93G+UVMYYXP4nbPqTYR8IHB9afVwowZTHwmA=\",\r\n\t\t\"StoreCode\": \"shashikant\",\r\n\t\t\"TransactionCode\": \"test001\",\r\n\t\t\"RedemptionDate\": \"22 Nov 2021\",\r\n\t\t\"Amount\": \"1000\",\r\n\t\t\"RedemptionType\": \"PD\",\r\n\t\t\"EasyPoints\": \"100\",\r\n\t\t\"ActivityCode\": \"NavneetRed\",\r\n\t\t\"TransactionDescription\": \"\",\r\n\t\t\"UserName\": \"apiuser@shashikant.com\",\r\n\t\t\"Activities\": \"\",\r\n\t\t\"CountryCode\": \"91\"\r\n\t}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://LPaaSwebapi.easyrewardz.com/api/CheckForEasyPointsRedemption",
+					"protocol": "https",
+					"host": [
+						"LPaaSwebapi",
+						"easyrewardz",
+						"com"
+					],
+					"path": [
+						"api",
+						"CheckForEasyPointsRedemption"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ConfirmOTP",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"EasyId\": \"8168126161\",\r\n    \"SecurityToken\": \"B8kIxmVMFPE17FUjfp8w4HOgBjb/aHBUQeUNoSFeUvCn6fOEe1gW4d2GzAY0AL9fn9EzEX02QYK5ZZMw1lcD4mMvnklHyRMfbmDN4JbuITdOdJwG045+9tdoMpO3pfqpaZZm2YZ93G+UVMYYXP4nbPqTYR8IHB9afVwowZTHwmA=\",\r\n    \"StoreCode\": \"shashikant\",\r\n    \"TransactionCode\": \"test001\",\r\n    \"SmsCode\": \"598711\",\r\n    \"UserName\": \"apiuser@shashikant.com\",\r\n    \"TransactionDate\": \"22 Nov 2021\",\r\n    \"CountryCode\": \"91\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://LPaaSwebapi.easyrewardz.com/api/ConfirmOTP",
+					"protocol": "https",
+					"host": [
+						"LPaaSwebapi",
+						"easyrewardz",
+						"com"
+					],
+					"path": [
+						"api",
+						"ConfirmOTP"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ResendOTP",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\t\"SecurityToken\": \"B8kIxmVMFPE17FUjfp8w4HOgBjb/aHBUQeUNoSFeUvCn6fOEe1gW4d2GzAY0AL9fn9EzEX02QYK5ZZMw1lcD4mMvnklHyRMfbmDN4JbuITdOdJwG045+9tdoMpO3pfqpaZZm2YZ93G+UVMYYXP4nbPqTYR8IHB9afVwowZTHwmA=\",\r\n\t\t\"TransactionCode\": \"OldBill_789\",\r\n\t\t\"UserName\": \"apiuser@shashikant.com\",\r\n\t\t\"StoreCode\": \"shashikant\",\r\n\t\t\"BillDate\": \"22 Jul 2021\"\r\n\t}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://LPaaSwebapi.easyrewardz.com/api/ResendOTP",
+					"protocol": "https",
+					"host": [
+						"LPaaSwebapi",
+						"easyrewardz",
+						"com"
+					],
+					"path": [
+						"api",
+						"ResendOTP"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ReleaseRedemptionPoint",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"EasyId\": \"8168126161\",\r\n    \"SecurityToken\": \"B8kIxmVMFPE17FUjfp8w4HOgBjb/aHBUQeUNoSFeUvCn6fOEe1gW4d2GzAY0AL9fn9EzEX02QYK5ZZMw1lcD4mMvnklHyRMfbmDN4JbuITdOdJwG045+9tdoMpO3pfqpaZZm2YZ93G+UVMYYXP4nbPqTYR8IHB9afVwowZTHwmA=\",\r\n    \"StoreCode\": \"shashikant\",\r\n    \"TransactionCode\": \"OldBill_12\",\r\n    \"UserName\": \"apiuser@shashikant.com\",\r\n    \"TransactionDate\": \"22 Jul 2021\",\r\n    \"CountryCode\": \"91\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://LPaaSwebapi.easyrewardz.com/api/ReleaseRedemptionPoints",
+					"protocol": "https",
+					"host": [
+						"LPaaSwebapi",
+						"easyrewardz",
+						"com"
+					],
+					"path": [
+						"api",
+						"ReleaseRedemptionPoints"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ConfirmEasyPointRedemption",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"EasyId\": \"8168126161\",\r\n    \"SecurityToken\": \"B8kIxmVMFPE17FUjfp8w4HOgBjb/aHBUQeUNoSFeUvCn6fOEe1gW4d2GzAY0AL9fn9EzEX02QYK5ZZMw1lcD4mMvnklHyRMfbmDN4JbuITdOdJwG045+9tdoMpO3pfqpaZZm2YZ93G+UVMYYXP4nbPqTYR8IHB9afVwowZTHwmA=\",\r\n    \"TransactionCode\": \"test001\",\r\n    \"RedemptionCode\": \"\",\r\n    \"UserName\": \"apiuser@shashikant.com\",\r\n    \"EOSS\": \"0\",\r\n    \"NONEOSSAmount\": \"0\",\r\n    \"NetAmount\": \"950\",\r\n    \"CountryCode\": \"91\",\r\n    \"NewTransactionCode\": \"shashi_2211_13\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://LPaaSwebapi.easyrewardz.com/api/ConfirmEasyPointsRedemption",
+					"protocol": "https",
+					"host": [
+						"LPaaSwebapi",
+						"easyrewardz",
+						"com"
+					],
+					"path": [
+						"api",
+						"ConfirmEasyPointsRedemption"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SaveSKUBillDetails Point Redemption",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"SecurityToken\": \"zbuJ1Qk0qDIsNbXHPL5qvQoXoio2uYADYK5ZNnj9nkN28Cj5+wljsoa3HQbDY4RZIigScRWx354drJRg6OF5VkxCJM3X82AUNsOm8Mj9c8LSzblu98FofowDf14oewh98MJxb13NjaUnwn3/XqZBo3VD6m2wAfiKlqPwklOqg5nDoAXChaSRMmmOFRrB+SbL\",\r\n    \"StoreCode\": \"BurgerKing\",\r\n    \"TransactionDate\": \"03 Nov 2022\",\r\n    \"BillNo\": \"Bill_0011\",\r\n    \"EasyId\": \"testingnewflow12@gmail.com\",\r\n    \"UserName\": \"shubangi@apiuser.com\",\r\n    \"Channel\": \"Offline\",\r\n    \"CustomerType\": \"Loyalty\",\r\n    \"BillValue\": \"990\",\r\n    \"PointsRedeemed\": \"10\",\r\n    \"PointsValueRedeemed\": \"\",\r\n    \"PrimaryOrderNumber\": \"\",\r\n    \"SKUOfferCode\": \"\",\r\n    \"CountryCode\": \"91\",\r\n    \"TransactionItems\": {\r\n        \"TransactionItem\": [\r\n            {\r\n                \"ItemType\": \"s\",\r\n                \"ItemQty\": \"1\",\r\n                \"Unit\": \"1000\",\r\n                \"ItemDiscount\": \"10\",\r\n                \"ItemTax\": \"\",\r\n                \"TotalPrice\": \"1000\",\r\n                \"BilledPrice\": \"990\",\r\n                \"Department\": \"BurgerKing\",\r\n                \"Category\": \"\",\r\n                \"Group\": \"\",\r\n                \"ItemId\": \"ER11207\",\r\n                \"RefBillNo\": \"\"\r\n            }\r\n        ]\r\n    },\r\n    \"PaymentMode\": {\r\n        \"TenderItem\": [\r\n             {\r\n                \"TenderCode\": \"CS\",\r\n                \"TenderID\": \"\",\r\n                \"TenderValue\": \"990\"\r\n            }\r\n        ]\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://lpaaswebapi.easyrewardz.com/api/SaveSKUBillDetails",
+					"protocol": "https",
+					"host": [
+						"lpaaswebapi",
+						"easyrewardz",
+						"com"
+					],
+					"path": [
+						"api",
+						"SaveSKUBillDetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EasyPointRefund",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n    \"Request\" : {\r\n   \"SecurityToken\": \"wwFEGfQXcyULVftPyOsBB+eTapx4GEui/dBsVlpxzztGNDPj6drfMlxoT/nZVdPHajjd3wiVR/CVO/oxGf0YnMTKD5pO50Ix2etB9cfzl70W1iWgvjItssgJOdo+5yu/ol0w4CeIWbBQ6osjdWl6AiAc9D5ISGzNwGaj21rYJTo=\",\r\n   \"UserName\": \"apiuser@shawman.com\",\r\n   \"StoreCode\": \"DemoShawman\",\r\n   \"EasyId\": \"7417234004\",\r\n   \"RefundAmount\": \"1900\",\r\n   \"RefundDate\": \"06 Oct 2022\",\r\n   \"RefundEasyPoints\": \"100\",\r\n   \"RefundTransactionId\": \"1000\",\r\n   \"TransactionCode\": \"345\",\r\n   \"TransactionDate\": \"06 Oct 2022\",\r\n   \"TransactionDescription\": \"\",\r\n   \"CountryCode\": \"91\"\r\n}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://lpaaswebapi.easyrewardz.com/api/EasyPointRefund",
+					"protocol": "https",
+					"host": [
+						"lpaaswebapi",
+						"easyrewardz",
+						"com"
+					],
+					"path": [
+						"api",
+						"EasyPointRefund"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SaveSKUBillDetails:- When Return one item",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"SecurityToken\": \"rLUxG+FE2Hq+arZJCsVWjmJgYq+4yL2aC7kTOx5mTuz0J3zlWD7t6xmg74sWE/iaRyaSC4RnkBqnQ0jFLQeiQKUa+8Tz2eDsBbXis/TC2qTTI9GZp4YqjiPclPUSZz7zbrU21gJbO+3z63kZ4/V9De+nk0sbq5mPJ/ewZi+gXVY=\",\r\n    \"StoreCode\": \"FTPStore232\",\r\n    \"TransactionDate\": \"19 Sep 2022\",\r\n    \"BillNo\": \"Re2321003\",\r\n    \"EasyId\": \"7417234004\",\r\n    \"UserName\": \"vikram@easycorp.in\",\r\n    \"Channel\": \"Offline\",\r\n    \"CustomerType\": \"Loyalty\",\r\n    \"BillValue\": \"-1900\",\r\n    \"PointsRedeemed\": \"\",\r\n    \"PointsValueRedeemed\": \"\",\r\n    \"PrimaryOrderNumber\": \"\",\r\n    \"SKUOfferCode\": \"\",\r\n    \"CountryCode\": \"91\",\r\n    \"TransactionItems\": {\r\n        \"TransactionItem\": [\r\n            {\r\n                \"ItemType\": \"r\",\r\n                \"ItemQty\": \"1\",\r\n                \"Unit\": \"2000\",\r\n                \"ItemDiscount\": \"100\",\r\n                \"ItemTax\": \"\",\r\n                \"TotalPrice\": \"2000\",\r\n                \"BilledPrice\": \"1900\",\r\n                \"Department\": \"Ladies Clothes\",\r\n                \"Category\": \"\",\r\n                \"Group\": \"\",\r\n                \"ItemId\": \"ER1235\",\r\n                \"RefBillNo\": \"004\"\r\n            },\r\n        ]\r\n    },\r\n    \"PaymentMode\": {\r\n        \"TenderItem\": [\r\n            {\r\n                \"TenderCode\": \"Cash\",\r\n                \"TenderID\": \"\",\r\n                \"TenderValue\": \"1900\"\r\n            },\r\n        ]\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://lpaaswebapi.erstaging.com/api/SaveSKUBillDetails",
+					"protocol": "https",
+					"host": [
+						"lpaaswebapi",
+						"erstaging",
+						"com"
+					],
+					"path": [
+						"api",
+						"SaveSKUBillDetails"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
